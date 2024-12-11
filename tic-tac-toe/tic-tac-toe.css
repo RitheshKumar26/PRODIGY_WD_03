@@ -1,0 +1,131 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d4d4dc;
+  }
+  
+  .main {
+    text-align: center;
+    background: #393f4d;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Player section styling */
+  .players {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .player {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .player__symbol {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #bc9595aa;
+    margin-top: 8px;
+  }
+  
+  /* Board styling */
+  .board-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .board__cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    background: #e2e8f0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .board__cell:hover {
+    background: #cbd5e1;
+  }
+  
+  .board__cell:disabled {
+    cursor: not-allowed;
+    background: #94a3b8;
+  }
+  
+  /* Button styling */
+  .game-restart-btn,
+  .popup__restart-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background: #feda6a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .game-restart-btn:hover,
+  .popup__restart-btn:hover {
+    background: #ffffff;
+  }
+  
+  /* Popup styling */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  
+  .popup.hide {
+    display: none;
+  }
+  
+  #message {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .board__cell {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+    }
+  
+    .game-restart-btn,
+    .popup__restart-btn {
+      font-size: 0.9rem;
+    }
+  }
+  
